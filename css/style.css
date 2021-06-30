@@ -1,0 +1,1066 @@
+/* GENERAL */
+
+body {
+	font-family: Helvetica, Courier, sans-serif;
+	color: #ffffff;
+	background: #000000;
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	color: #000000;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 40px;
+	letter-spacing: 5px;
+	word-spacing: 5px;
+	font-weight: 400;
+}
+
+
+/* NAVBAR */
+
+
+.navbar {
+	background-color: #000000 !important;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-family: 'Oswald', sans-serif;
+
+}
+
+.navbar-brand {
+	font-size: 30px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding-left: 30px;
+}
+
+.navbar-nav {
+	margin-right: 30px;
+}
+
+.nav-item {
+	padding: 5px 30px 0 30px; 
+}
+
+.nav-item a {
+	text-transform: uppercase;
+	color: #ffffff !important;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#active {
+	color: #A9A9A9 !important;
+}
+
+.nav-link:hover {
+	color: #A9A9A9 !important;
+}
+
+.dropdown-menu {
+	background-color: #000000;
+	font-family: 'Inconsolata', monospace;
+	padding-top: 50px;
+	padding-left: 20px;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20%);   /* optional */
+    transition: all .5s;
+}
+
+.dropdown-menu a {
+	color:  #A9A9A9  !important;
+	font-weight: 300;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	line-height: 25px; 
+	font-size: 16px;
+}
+
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+}
+
+.dropdown-item:hover {
+	color: #ffffff !important;
+	background-color: transparent !important;
+}
+
+.navbar-collapse {
+	text-align: center;  /* or left ? */
+	padding-top: 20px;
+}
+
+
+
+
+/* BANNER */
+/* Which one is the best code between flex and position absolute/relative to place my banner content ? */
+
+/* #banner {
+	height: 100vh;
+	background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 50%),
+    url("../img/deer.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    margin-top: 70px;
+    margin-bottom: 30px;
+
+}
+
+#banner-content {
+	padding-left: 180px;
+} */
+
+#banner {
+	height: 108vh;
+	background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 50%),
+    url("../img/deer.jpg") no-repeat; 
+    background-size: cover;
+    background-position: center center; 
+    position: relative; 
+    margin-top: 70px;
+}
+
+#banner-content {
+	position: absolute;
+    top: 20%;   /* Should be in px or % ? */
+    left: 15%;  /* Should be in px or % ? */
+    text-transform: uppercase;
+}  
+
+
+#yellow {
+	color: #F5CB5C;
+	font-size: 100px;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 3px;
+	/* font-weight: bold;      optional but nice */
+
+}
+
+#white {
+	font-size: 100px;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 3px;
+}
+
+
+/* BLOG */
+
+#blog {
+   padding-top: 150px;
+   padding-bottom: 130px;
+   /* background-color: #FFFCED; */
+   background-color: rgb(255,255,255);
+}
+
+#posts {
+	margin-top: 100px;
+	margin-left: 20px;  /* optional because also nice without any margin left & right */
+	margin-right: 20px; /* optional because also nice without any margin left & right */
+}
+
+.hover-effect {
+overflow: hidden;
+position: relative;
+text-align: center;
+cursor: default;
+}
+
+.hover-effect .overlay {
+width: 100%;
+height: 100%;
+position: absolute;
+overflow: hidden;
+top: 0;
+left: 0;
+opacity: 0;
+background-color: rgba(0,0,0,0.5);
+-webkit-transition: all .4s ease-in-out;
+transition: all .4s ease-in-out
+}
+
+.hover-effect img {
+-webkit-transition:all .4s linear;
+transition: all .4s linear;
+}
+
+.hover-effect h2 {
+text-transform: uppercase;
+color: #ffffff;
+text-align: center;
+font-size: 15px;
+background: rgba(0,0,0,0.6);
+-webkit-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
+padding: 15px;
+}
+
+.hover-effect a.read {
+text-decoration: none;
+font-family: 'Oswald', sans-serif;
+font-weight: lighter;
+font-size: 18px;
+display: inline-block;
+text-transform: uppercase;
+color: #ffffff;
+border: 1px solid #ffffff;
+-webkit-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
+margin-top: 150px; 
+padding: 7px 14px;
+}
+
+.hover-effect a.read:hover {
+box-shadow: 0 0 5px #ffffff;
+}
+
+.hover-effect:hover img {
+-ms-transform: scale(1.2);
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+
+.hover-effect:hover .overlay {
+opacity: 1;
+}
+
+.hover-effect:hover a.read {
+-webkit-transition-delay:.2s;
+transition-delay:.2s;
+}
+
+h3 {
+	color: #000000;
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 400;
+	margin-top: 30px;
+}
+
+.article {
+	font-family: 'Inconsolata', monospace;
+	color: #777777;
+	margin-top: 20px;
+}
+
+.fa-arrow-right {
+	color: #000000;
+	font-size: 20px;
+	padding-left: 5px;
+    transition: all .5s;
+    padding-bottom: 20px;
+}
+
+.fa-arrow-right:hover {
+	color: #F5CB5C;
+	padding-left: 10px;
+}
+
+
+/* FEATURES - ICONS */
+
+#features {
+    background-color: #FFEDCD; /* or FFFCED ? */
+    padding-top: 150px;
+    padding-bottom: 130px;
+}
+
+.attribute {
+	text-align: center;
+	padding: 10px;
+}
+
+.attribute img {
+	width: 120px;
+    height: 130px; 
+}
+
+.attribute h3 {
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.paragraph {
+	font-family: 'Inconsolata', monospace;
+	color: #777777;
+	width: 70%;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+.paragraph-bottom {
+	padding-bottom: 50px;
+}
+
+
+
+/* COUNTER NUMBERS */
+
+#counter {
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    background-color: #1B1B1B;	
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 50%),
+    url("../img/astronaut.jpg") no-repeat;
+    background-size: cover;
+    background-position: center bottom; 
+    background-attachment: fixed;
+    height: 60vh;
+}
+
+.number {
+	display: inline-block;
+    width: 20%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: lighter;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+.counter-number {
+	font-size: 50px;
+	font-weight: 400;
+}
+
+.counter-letter {
+	letter-spacing: 3px;
+	word-spacing: 5px;
+}
+
+
+/* GALLERY */
+/* Perhaps a bit confusing regarding the hover (a lot of div) but it's working */
+
+#photos {
+    background-color: rgb(255,255,255);
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+
+.gallery > div {
+    padding: 0 !important;
+}
+
+.gallery {
+   padding-top: 150px;
+}
+
+
+.gallery-box {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+    overflow:hidden;
+}
+
+.gallery-box .gallery-box-caption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    background: rgba(44,44,44,.8);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.gallery-box .gallery-box-caption .gallery-box-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.gallery-box:hover .gallery-box-caption {
+    opacity: 1;
+}
+
+.gallery-box:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.gallery-box img {
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+
+/* MODALS */
+
+.modal-content {
+	background: #000000;
+	min-width: 700px;
+	position: absolute;          
+    left: 50%;                   /* to center my modal */
+    top: 0;                      /* to center my modal */
+    transform: translate(-50%, 0);  /* to center my modal */
+}
+
+.title-modal {
+	color: #ffffff;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 200;
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 3px;
+	word-spacing: 3px;
+}
+
+.btn-secondary {
+	background-color: transparent;
+	border-radius: 290px;
+    border: 1px solid #f0f0f0;
+    border-color: #f0f0f0;
+    font-family: 'Oswald', sans-serif;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    padding: 10px 20px;
+    margin: 20px auto;
+}
+
+.btn-secondary:hover {
+	opacity: 0.7;
+	background-color: transparent;
+}
+
+
+/* SKILLS */
+
+#skills {
+	background-color: rgb(255,255,255);
+	padding-bottom: 140px;
+	padding-left: 60px;
+}
+
+#skills-title {
+	text-align: left;
+	padding-bottom: 100px;
+}
+
+.what-skill {
+	color: #000000;
+	font-family: 'Inconsolata', monospace;
+	font-size: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.progress-bar {
+	background-color: #000000;
+}
+
+#skills-left {
+	padding-top: 20px;
+}
+
+#skills img {
+	width: 80%;
+	border-left: 20px solid #F5CB5C;
+	border-top: 20px solid #F5CB5C;
+	border-right: 10px solid #ffffff;
+	border-bottom: 10px solid #ffffff;
+}
+
+
+/* CAROUSEL - QUOTES */
+
+#quotes {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 50%),
+    url("../img/moon.jpg") no-repeat;
+    background-size: cover;
+    background-position: center bottom; 
+    background-attachment: fixed;
+    height: 70vh;
+}
+
+#carouselContent {
+	padding-top: 100px;
+	padding-bottom: 100px; 
+	background: transparent;
+}
+
+.carousel-inner {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.carousel-item q {
+	color: #ffffff;
+	font-family: 'Inconsolata', monospace;
+	font-size: 25px;
+	letter-spacing: 3px;
+	font-weight: 300;
+}
+
+.carousel-item p {
+	color: #F5CB5C;
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	padding-top: 20px;
+	letter-spacing: 2px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+	background: none;
+	border: none;
+}
+
+
+/* TEAM */
+
+#team {
+	background-color: #ffffff;
+	padding-top: 150px;
+	padding-bottom: 130px;
+}
+
+#meet {
+	margin-top: 130px;
+	margin-left: 50px;  
+	margin-right: 50px; 
+}
+
+h4 {
+	color: #000000;
+	font-family: 'Oswald', sans-serif;
+	font-size: 17px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	word-spacing: 3px;
+	font-weight: 500;
+	margin-top: 30px;
+}
+
+.description {
+	font-family: 'Inconsolata', monospace;
+	color: #000000;
+	margin-top: 20px;
+	font-size: 22px;
+}
+
+.social-media-team {
+	color: #000000;
+	font-size: 17px;
+	padding-right: 15px;
+}
+
+.social-media-team:hover {
+	color: #F5CB5C;
+}
+
+
+/* CONTACT */
+
+#contact {
+	background-color: #FFEDCD;
+	padding-top: 70px;
+	padding-bottom: 50px;
+}
+
+.paragraph-contact {
+	color: #000000;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 35px;
+	letter-spacing: 4px;
+	word-spacing: 4px;
+	padding-left: 52px;
+}
+
+.btn-contact {
+	background: transparent;
+	border: 3px solid #000000;
+	border-radius: 0%;
+	padding: 20px 25px 20px 25px;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	margin-left: 90px;
+}
+
+.btn-contact:hover {
+	border-color: #F5CB5C;
+	color: #ffffff;
+	background: #F5CB5C;
+}
+
+.title-contact {
+   text-transform: uppercase;
+   color: #F5CB5C;
+   font-family: 'Oswald', sans-serif;
+   letter-spacing: 3px;
+   word-spacing: 3px;
+}
+
+.label-size {
+	font-family: 'Inconsolata', monospace;
+	font-size: 20px;
+}
+
+.body-message {
+	padding-top: 20px;
+}
+
+
+/* SOCIAL MEDIA BAR */
+
+.social-media-bar {
+     position: fixed;
+     top: 75%;
+     right: 0;
+     -webkit-transform: translateY(-75%);
+     -ms-transform: translateY(-75%);
+     transform: translateY(-75%);
+}
+
+.social-media-bar a {
+	display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+.social-media-bar a:hover {
+	 background-color: #000000;
+}
+
+
+.linkedin {
+	background: #007BB5;
+	color: #ffffff;
+}
+
+.shop {
+	background: #F5CB5C;
+	color: #ffffff;
+}
+
+
+/* FOOTER */
+
+footer {
+	background-color: #000000;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.footer-title {
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+footer ul {
+	padding-top: 15px;
+}
+
+footer p {
+    font-family: 'Inconsolata', monospace;
+	color: #777777;
+	padding-top: 15px;
+}
+
+footer li {
+   display: inline-block;
+   padding: 15px;
+}
+
+.social-media-footer {
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.social-media-footer:hover {
+	color: #F5CB5C;
+}
+
+
+.btn-send-close {
+	text-align: right;
+}
+
+
+/* MEDIA QUERIES */
+
+
+@media(max-width: 541px) and (min-width: 320px) /* iPhone & other */ {
+
+h2 {
+	font-size: 28px;
+}
+
+.navbar-nav {
+	margin-right: 10px;
+}
+
+.nav-item {
+	padding: 0 0 10px 0; 
+}
+
+.dropdown-menu {
+	padding-top: 0;
+	padding-left: 0; 
+	text-align: center;
+	opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-item {
+	margin-top: -10px;
+} 
+
+#banner {
+	height: 30vh;
+	background-position: center bottom; 
+	margin-top: 25px;
+}
+
+#banner-content {  
+    left: 10%;  
+}  	
+
+#yellow, #white {
+	font-size: 25px;
+}
+
+#blog, #features, #photos {
+	padding-top: 70px;
+	padding-bottom: 50px;
+}
+
+#posts {
+	margin-top: 50px;
+}
+
+.gallery {
+	padding-top: 50px;
+}
+
+.attribute img {
+	width: 100px;
+    height: 100px; 
+}
+
+.paragraph, .paragraph-bottom {
+	padding-bottom: 40px;
+}
+
+#counter {
+    height: 40vh;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.number {
+    margin: 0;
+    vertical-align: top;
+}
+
+.counter-number {
+	font-size: 25px;
+}
+
+.counter-letter {
+	font-size: 15px;
+}
+
+.modal-content {
+	min-width: auto;
+	top: 70px;
+}
+
+.social-media-bar {
+	display: none;
+}
+
+#skills {
+	padding-left: 20px;
+	padding-bottom: 70px;
+}
+
+#skills-title {
+	padding-bottom: 30px;
+}
+
+#skills-left {
+	padding-top: 0;
+}
+
+#skills img {
+	width: auto;
+	margin-top: 30px;
+	border: none;
+}
+
+#skills-title {
+	margin-top: -5px;
+	text-align: center;
+} 
+
+.what-skill {
+	font-size: 10px;
+}
+
+#quotes {
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 30vh;
+	display: flex;
+	align-items: center; 
+}
+
+#carouselContent {
+	padding-top: 0;
+	padding-bottom: 0;
+
+}
+
+.carousel-item q {
+	font-size: 10px;
+}
+
+.carousel-item p {
+	font-size: 8px;
+}
+
+#team {
+	padding-top: 90px;
+	padding-bottom: 60px;
+}
+
+#meet {
+	margin-top: 30px;
+	margin-left: 10px;  
+	margin-right: 10px; 
+}
+
+.social-media-team {
+	padding-bottom: 50px;
+}
+
+#contact {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.paragraph-contact {
+    font-size: 20px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    text-align: center;
+}
+
+.btn-contact {
+	padding: 10px 15px 10px 15px;
+   margin-left: 0;
+} 
+
+.btn-right {
+      text-align: center;
+}
+
+.btn-send-close {
+	text-align: right;
+}
+
+}
+
+@media(max-width: 769px) and (min-width: 542px) /* ipad */ {
+
+.navbar-nav {
+	margin-right: 10px;
+}
+
+.nav-item {
+	padding: 0 0 10px 0; 
+}
+
+.dropdown-menu {
+	padding-top: 0;
+	padding-left: 0; 
+	text-align: center;
+	opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-item {
+	margin-top: -10px;
+} 
+
+#banner {
+    height: 40vh;
+}
+
+#yellow, #white {
+	font-size: 50px;
+}
+
+.hover-effect h2 {
+    font-size: 10px;
+    padding: 10px;
+}
+
+.hover-effect a.read {
+    margin-top: 35px; 
+    padding: 2px 10px;
+}
+
+.hover-effect a.read-responsive {
+	margin-top: 23px;
+}
+
+#counter {
+    height: 40vh;
+}
+
+.number {
+    margin: 5px;
+    vertical-align: top;
+}
+
+.counter-number {
+	font-size: 50px;
+}
+
+.modal-content {
+    top: 70px;
+}
+
+#skills-title {
+	padding-bottom: 10px;
+}
+
+#skills img {
+	margin-top: 70px;  
+}
+
+#quotes {
+    height: 30vh;
+}
+
+#carouselContent {
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.carousel-item q {
+	font-size: 22px;
+}
+
+.carousel-item p {
+	font-size: 17px;
+}
+
+#contact {
+	padding-right: 30px;
+}
+
+.paragraph-contact {
+	font-size: 25px;
+}
+
+}
+
+@media(max-width: 1366px) and (min-width: 1024px) /* ipad pro */ {
+
+
+#banner {
+    height: 40vh;
+}
+
+#yellow, #white {
+	font-size: 65px;
+}
+
+.hover-effect h2 {
+    font-size: 10px;
+    padding: 10px;
+}
+
+.hover-effect a.read {
+    margin-top: 35px; 
+    padding: 2px 10px;
+}
+
+#counter {
+    height: 40vh;
+}
+
+.number {
+    margin: 5px;
+    vertical-align: top;
+}
+
+.counter-number {
+	font-size: 50px;
+}
+
+.modal-content {
+    top: 200px;
+}
+
+#skills-title {
+	padding-bottom: 10px;
+	margin-top: -10px;     /* I needed to put a negative margin top because I don't know why a thin line appears on the top (between the gallery section & the skills section). Maybe it's a bug from Chrome */
+}
+
+#skills img {
+	margin-top: 40px; 
+}
+
+#quotes {
+    height: 40vh;
+}
+
+
+}
+
+
+
+
+
+
+
