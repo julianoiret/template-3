@@ -129,7 +129,8 @@ h2 {
 } */
 
 #banner {
-	height: 108vh;
+	/*height: 108vh;*/
+  height: 90vh;
 	background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 50%),
     url("../img/deer.jpg") no-repeat; 
     background-size: cover;
