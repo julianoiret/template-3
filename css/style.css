@@ -746,7 +746,7 @@ h2 {
 	padding-left: 0; 
 	text-align: center;
 	opacity: 1;
-    visibility: visible;
+  visibility: visible;
 }
 
 .dropdown-item {
@@ -1002,10 +1002,13 @@ h2 {
 .paragraph-contact {
 	font-size: 25px;
 }
-
 }
 
+<<<<<<< HEAD
 /*@media(max-width: 1366px) and (min-width: 1024px)  {
+=======
+/*@media(max-width: 1366px) and (min-width: 1024px) {
+>>>>>>> styling
 
 
 #banner {
@@ -1058,6 +1061,7 @@ h2 {
 }*/
 
 /* I needed to put a negative margin top because I don't know why a thin line appears on the top (between the gallery section & the skills section). Maybe it's a bug from Chrome */
+
 
 
 
